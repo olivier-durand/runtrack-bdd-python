@@ -1,0 +1,16 @@
+import mysql.connector
+mydb = mysql.connector.connect(
+    host="localhost",
+    user="root",
+    password="Poussin13",
+    database="laplateforme",
+)
+
+
+cursor = mydb.cursor()
+requete_sql = "SELECT SUM(superficie) FROM etage"
+cursor.execute(requete_sql)
+resultat=cursor.fetchone()[0]
+print(f"La superficie de La Plateforme est de {resultat} m2")
+cursor.close()
+mydb.close()

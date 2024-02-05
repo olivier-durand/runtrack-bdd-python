@@ -1,0 +1,25 @@
+mysql> USE laplateforme
+Database changed
+mysql> -- Création de la table "etage"
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> CREATE TABLE etage (
+    ->     id INT PRIMARY KEY AUTO_INCREMENT,
+    ->     nom VARCHAR(255),
+    ->     numero INT,
+    ->     superficie INT
+    -> );
+Query OK, 0 rows affected (0.04 sec)
+
+mysql>
+mysql> -- Création de la table "salle"
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> CREATE TABLE salle (
+    ->     id INT PRIMARY KEY AUTO_INCREMENT,
+    ->     nom VARCHAR(255),
+    ->     id_etage INT,
+    ->     capacite INT,
+    ->     FOREIGN KEY (id_etage) REFERENCES etage(id)
+    -> );
+Query OK, 0 rows affected (0.05 sec)
