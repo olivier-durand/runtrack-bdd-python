@@ -1,0 +1,11 @@
+mysql> INSERT INTO etudiant (nom, prenom, age, email)
+    -> VALUES ('Doe','John', 18, 'john.doe@laplateforme.io');
+Query OK, 1 row affected (0.00 sec)
+
+mysql> INSERT INTO etudiant (nom, prenom, age, email)
+    -> VALUES ('Barnes', 'Binkie', 16, 'binkie.barnes@laplateforme.io');
+Query OK, 1 row affected (0.00 sec)
+
+mysql> INSERT INTO etudiant (nom, prenom, age, email)
+    -> VALUES ('Dupuis', 'Gertrude', 20, 'gertrude.dupuis@laplateforme.io');
+Query OK, 1 row affected (0.00 sec)
